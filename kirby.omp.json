@@ -12,13 +12,18 @@
 
   "blocks": [
     {
+      "newline": true,
       "alignment": "left",
       "segments": [
         {
           "foreground": "p:os",
+          "foreground_templates": ["{{ if gt .Code 0 }}p:pink{{ end }}"],
+          "properties": {
+            "always_enabled": true
+          },
           "style": "plain",
           "template": "\u256d\u2500 ",
-          "type": "text"
+          "type": "status"
         },
         {
           "foreground": "p:blue",
@@ -198,8 +203,12 @@
         {
           "foreground": "p:os",
           "style": "plain",
+          "foreground_templates": ["{{ if gt .Code 0 }}p:pink{{ end }}"],
           "template": "\u2570\u2500",
-          "type": "text"
+          "properties": {
+            "always_enabled": true
+          },
+          "type": "status"
         },
         {
           "foreground": "p:os",
