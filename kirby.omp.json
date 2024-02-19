@@ -217,7 +217,7 @@
             "always_enabled": true
           },
           "style": "plain",
-          "template": "\uf105",
+          "template": "\uf105 ",
           "type": "status"
         }
       ],
