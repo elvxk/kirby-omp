@@ -1,0 +1,219 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+
+  "console_title_template": "Kirby 🐾 {{.Folder}}",
+  "palette": {
+    "os": "#ACB0BE",
+    "closer": "p:os",
+    "pink": "#F5C2E7",
+    "lavender": "#B4BEFE",
+    "blue": "#89B4FA"
+  },
+
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "foreground": "p:os",
+          "style": "plain",
+          "template": "\u256d\u2500 ",
+          "type": "text"
+        },
+        {
+          "foreground": "p:blue",
+          "style": "plain",
+          "template": "{{ .UserName }}@{{ .HostName }} ",
+          "type": "session"
+        },
+        {
+          "foreground": "p:pink",
+          "properties": {
+            "hide_root_location": true,
+            "folder_separator_icon": " ",
+            "style": "agnoster_short"
+          },
+          "style": "plain",
+          "template": "\uf105 {{ if eq .PWD `~` }}\uf198 {{ else if hasPrefix (printf \"%.2s\" .PWD) `~\\` }}\uf198 {{.Folder}} {{else}}\ue5fe {{.Folder}} {{end}}\uf105 ",
+          "type": "path"
+        },
+        {
+          "foreground": "p:lavender",
+          "properties": {
+            "branch_icon": "\ue725 ",
+            "cherry_pick_icon": "\ue29b ",
+            "commit_icon": "\uf417 ",
+            "fetch_status": true,
+            "fetch_upstream_icon": false,
+            "merge_icon": "\ue727 ",
+            "no_commits_icon": "\uf0c3 ",
+            "rebase_icon": "\ue728 ",
+            "revert_icon": "\uf0e2 ",
+            "tag_icon": "\uf412 "
+          },
+          "template": "{{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }} ",
+          "style": "plain",
+          "type": "git"
+        },
+        {
+          "foreground": "p:os",
+          "properties": {
+            "style": "round",
+            "threshold": 0
+          },
+          "style": "plain",
+          "template": "{{ .FormattedMs }}",
+          "type": "executiontime"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "right",
+      "overflow": "hide",
+      "segments": [
+        {
+          "type": "angular",
+          "style": "plain",
+          "foreground": "p:lavender",
+          "template": " "
+        },
+        {
+          "type": "dart",
+          "style": "plain",
+          "foreground": "p:lavender",
+          "template": " "
+        },
+        {
+          "type": "docker",
+          "style": "plain",
+          "foreground": "p:lavender",
+          "template": "  "
+        },
+        {
+          "type": "dotnet",
+          "style": "plain",
+          "foreground": "p:lavender",
+          "template": "  "
+        },
+        {
+          "type": "flutter",
+          "style": "plain",
+          "foreground": "p:lavender",
+          "template": " "
+        },
+        {
+          "type": "go",
+          "style": "plain",
+          "foreground": "p:lavender",
+          "template": " "
+        },
+        {
+          "type": "java",
+          "style": "plain",
+          "foreground": "p:lavender",
+          "template": " "
+        },
+        {
+          "type": "kotlin",
+          "style": "plain",
+          "foreground": "p:lavender",
+          "template": " "
+        },
+        {
+          "type": "lua",
+          "style": "plain",
+          "foreground": "p:lavender",
+          "template": " "
+        },
+        {
+          "type": "node",
+          "style": "plain",
+          "foreground": "p:lavender",
+          "template": " "
+        },
+        {
+          "type": "npm",
+          "style": "plain",
+          "foreground": "p:lavender",
+          "template": " "
+        },
+        {
+          "type": "perl",
+          "style": "plain",
+          "foreground": "p:lavender",
+          "template": " "
+        },
+        {
+          "type": "php",
+          "style": "plain",
+          "foreground": "p:lavender",
+          "template": " "
+        },
+        {
+          "type": "python",
+          "style": "plain",
+          "foreground": "p:lavender",
+          "template": " "
+        },
+        {
+          "type": "react",
+          "style": "plain",
+          "foreground": "p:lavender",
+          "template": " "
+        },
+        {
+          "type": "ruby",
+          "style": "plain",
+          "foreground": "p:lavender",
+          "template": " "
+        },
+        {
+          "type": "rust",
+          "style": "plain",
+          "foreground": "p:lavender",
+          "template": " "
+        },
+        {
+          "type": "swift",
+          "style": "plain",
+          "foreground": "p:lavender",
+          "template": " "
+        },
+        {
+          "type": "time",
+          "style": "plain",
+          "foreground": "p:blue",
+          "properties": {
+            "time_format": "[15:04]"
+          }
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "p:os",
+          "style": "plain",
+          "template": "\u2570\u2500",
+          "type": "text"
+        },
+        {
+          "foreground": "p:os",
+          "foreground_templates": ["{{ if gt .Code 0 }}p:pink{{ end }}"],
+          "properties": {
+            "always_enabled": true
+          },
+          "style": "plain",
+          "template": "\uf105",
+          "type": "status"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "version": 2
+}
