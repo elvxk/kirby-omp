@@ -138,12 +138,6 @@
           "template": " "
         },
         {
-          "type": "npm",
-          "style": "plain",
-          "foreground": "p:lavender",
-          "template": " "
-        },
-        {
           "type": "perl",
           "style": "plain",
           "foreground": "p:lavender",
