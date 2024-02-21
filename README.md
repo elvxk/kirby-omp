@@ -51,6 +51,9 @@
 
 - 📦 Requirement Installation
 
+  - To install the font on your terminal see the guide below - [Windows Terminal](https://learn.microsoft.com/en-us/windows/terminal/customize-settings/profile-appearance#font) - [Alacritty](https://www.behova.net/fonts-in-alacritty/) - [Git Bash](https://stackoverflow.com/questions/43378290/git-bash-mingw-64-v2-12-2-how-do-i-change-the-font-size) - [MacOs](https://support.apple.com/en-mz/guide/terminal/trmltxt/mac#:~:text=Use%20Text%20settings%20in%20Terminal,a%20profile%2C%20then%20click%20Text.) - [Linux](https://www.linux.com/topic/desktop/how-change-your-linux-console-fonts/)
+    <br/>
+
   - To install [Oh My Posh](https://ohmyposh.dev) on MacOS/Windows/Linux follow documentation [here](https://ohmyposh.dev/docs/installation/windows).
   - Nerd Fonts are required for the Kirby theme. To display all icons, the use of [Nerd Fonts](https://www.nerdfonts.com) is recommended. More information on fonts can be found [here](https://ohmyposh.dev/docs/installation/fonts).
 
